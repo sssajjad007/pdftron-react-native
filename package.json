@@ -6,11 +6,11 @@
   "main": "./lib/index.js",
   "typings": "index.ts",
   "scripts": {
-    "copy-to-repo": "cd scripts && python3 fileCopy.py toRepo && cd ..",
-    "copy-to-node-modules": "cd scripts && python3 fileCopy.py toModule && cd ..",
+    "copy-to-repo": "cd scripts && py fileCopy.py toRepo && cd ..",
+    "copy-to-node-modules": "cd scripts && py fileCopy.py toModule && cd ..",
     "start": "tsc",
-    "postinstall": "python3 scripts/newPodspecMessage.py",
-    "prestart": "python3 scripts/newPodspecMessage.py",
+    "postinstall": "py scripts/newPodspecMessage.py",
+    "prestart": "py scripts/newPodspecMessage.py",
     "prepublishOnly": "bash scripts/prepare.sh",
     "postpublish": "bash scripts/postpublish.sh"
   },
