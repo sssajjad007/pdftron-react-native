@@ -1098,9 +1098,9 @@ public class DocumentView extends com.pdftron.pdf.controls.DocumentView2 {
         mBuilder = mBuilder.pageStackEnabled(showQuickNavigationButton);
     }
 
-    // public void setPhotoPickerEnabled(boolean photoPickerEnabled) {
-    //     mToolManagerBuilder = mToolManagerBuilder.setShowSignatureFromImage(photoPickerEnabled);
-    // }
+    public void setPhotoPickerEnabled(boolean photoPickerEnabled) {
+        mToolManagerBuilder = mToolManagerBuilder.setShowSignatureFromImage(photoPickerEnabled);
+    }
 
     public void setAutoResizeFreeTextEnabled(boolean autoResizeFreeTextEnabled) {
         mToolManagerBuilder = mToolManagerBuilder.setAutoResizeFreeText(autoResizeFreeTextEnabled);
