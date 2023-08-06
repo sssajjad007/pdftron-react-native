@@ -4945,8 +4945,7 @@ public class DocumentView extends com.pdftron.pdf.controls.DocumentView2 {
         writer.begin(getPdfViewCtrl().getDoc().getSDFDoc(), true);
 
         Annot annot = ViewerUtils.getAnnotById(getPdfViewCtrl().getDoc(), annotationId, pageNumber);
-        String customUrl = "https://file-examples.com/storage/fe072e668b64cd6ce9c9963/2017/10/file_example_PNG_500kB.png";
-        File file = new File(URI.create(customUrl));        
+        File file = new File(getContext().getFilesDir(), "image.png");
         DocumentViewUtilsKt.downloadFromURL(stampImageDataUrl, file.getAbsolutePath(), new DownloadFileCallback() {
             @Override
             public void downloadSuccess(@NonNull String path) {
