@@ -1098,9 +1098,9 @@ public class DocumentView extends com.pdftron.pdf.controls.DocumentView2 {
         mBuilder = mBuilder.pageStackEnabled(showQuickNavigationButton);
     }
 
-    public void setPhotoPickerEnabled(boolean photoPickerEnabled) {
-        mToolManagerBuilder = mToolManagerBuilder.setShowSignatureFromImage(photoPickerEnabled);
-    }
+    // public void setPhotoPickerEnabled(boolean photoPickerEnabled) {
+    //     mToolManagerBuilder = mToolManagerBuilder.setShowSignatureFromImage(photoPickerEnabled);
+    // }
 
     public void setAutoResizeFreeTextEnabled(boolean autoResizeFreeTextEnabled) {
         mToolManagerBuilder = mToolManagerBuilder.setAutoResizeFreeText(autoResizeFreeTextEnabled);
@@ -4942,7 +4942,7 @@ public class DocumentView extends com.pdftron.pdf.controls.DocumentView2 {
         ElementWriter writer = new ElementWriter();
         ElementBuilder builder = new ElementBuilder();
 
-        writer.begin(getPdfViewCtrl().getDoc().getSDFDoc(), true);
+        // writer.begin(getPdfViewCtrl().getDoc().getSDFDoc(), true);
 
         Annot annot = ViewerUtils.getAnnotById(getPdfViewCtrl().getDoc(), annotationId, pageNumber);
         File file = new File(getContext().getFilesDir(), "image.png");
@@ -4960,13 +4960,13 @@ public class DocumentView extends com.pdftron.pdf.controls.DocumentView2 {
                     Element element = builder.createImage(image, 0, 0, w, h);
 
                     // Write the element
-                    writer.writePlacedElement(element);
+                    // writer.writePlacedElement(element);
 
                     // Get the bounding box of the new element
                     com.pdftron.pdf.Rect bbox = element.getBBox();
 
                     // Configure the appearance stream that will be written to the annotation
-                    Obj new_appearance_stream = writer.end();
+                    // Obj new_appearance_stream = writer.end();
 
                     // Set the bounding box to be the rect of the new element
                     new_appearance_stream.putRect(
